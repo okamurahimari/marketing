@@ -1,16 +1,15 @@
 @charset "UTF-8";
 
-.box{
-    background: rgb(150,200,60);
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    text-align: center;
-    width: 200px;
+.box {
+  background: #999999;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 250px
 }
 
-
-.fade-in{
+.fade-in {
   animation-name: fadeIn;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -18,16 +17,15 @@
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-
-.fade-up{
+.fade-up {
   animation-name: fadeUp;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -35,18 +33,17 @@
 }
 
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
-.fade-down{
+.fade-down {
   animation-name: fadeDown;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -54,50 +51,48 @@
 }
 
 @keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+.fade-right {
+  animation-name: fadeRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
 
-.fade-right{
-    animation-name: fadeRight;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+@keyframes fadeRight {
+  from {
     opacity: 0;
+    transform: translateX(10px);
   }
-  
-  @keyframes fadeRight {
-      from {
-          opacity: 0;
-          transform: translateX(20px);
-      }
-      to {
-          opacity: 1;
-          transform: translateX(0);
-      }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
 
+.fade-left {
+  animation-name: fadeLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
 
-  .fade-left{
-    animation-name: fadeLeft;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+@keyframes fadeLeft {
+  from {
     opacity: 0;
+    transform: translateX(-10px);
   }
-  
-  @keyframes fadeLeft {
-      from {
-          opacity: 0;
-          transform: translateX(-20px);
-      }
-      to {
-          opacity: 1;
-          transform: translateX(0);
-      }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
