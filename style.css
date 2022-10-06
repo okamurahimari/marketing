@@ -10,13 +10,35 @@ body {
 }
 
 h1 {
-  cursor: pointer;
-  margin: 0;
+  position:relative;
+  line-height: 1.4;
+  padding: .25em 1em;
+  top: 0;
 }
 
 .logo {
   height: 180px;
   width: 180px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width:1000px;
+}
+
+main > section{
+  background-color: #ccc;
+  box-sizing:  border-box;
+  margin-bottom: 20px;
+  padding:10px;
+  width: 300px;
+}
+
+main> section h1{
+  text-align: center;
 }
 
 table {
@@ -35,13 +57,12 @@ tr:nth-child(odd) {
 
 h1 {
   position: relative;
-  display: inline-block;
   padding: 0 55px;
 }
 
-h1:before, h1:after {
-  content: '';
+h1::before, h1::after {
   position: absolute;
+  content: '';
   top: 50%;
   display: inline-block;
   width: 45px;
@@ -49,9 +70,19 @@ h1:before, h1:after {
   background-color: black;
 }
 
-h1:before {
+h1::before {
   left:0;
 }
-h1:after {
+h1::after {
   right: 0;
 }
+
+@media screen and (max-width: 1000px) {
+  main{
+    display:block;
+  }
+
+  main > section {
+    max-width: 100%;
+  }
+  }
