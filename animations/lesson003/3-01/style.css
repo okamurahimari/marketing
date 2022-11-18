@@ -1,0 +1,14 @@
+.wrap{
+	border:1px solid #000;
+	height: 360px;
+	overflow: hidden;
+	width: 640px;
+}
+
+.test-image{
+	transition: all .3s ;
+	width: 640px;
+}
+.test-image:hover {
+	transform: scale(3,3);
+}
